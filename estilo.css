@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  /* Menú */
+  .menu {
+    background-color: #1e3a8a;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #cbd5e1;
+  }
+  
+  /* Secciones */
+  main {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .contenido {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  :target {
+    display: block;
+  }
+  
+  /* Mostrar la primera sección por defecto */
+  body:not(:has(:target)) #inicio {
+    display: block;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
